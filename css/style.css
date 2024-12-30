@@ -1,0 +1,167 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+h1, h2, hr {
+    color: #213d62;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 3em;
+}
+
+h2 {
+    margin-top: 30px;
+    font-size: 1.2em;;
+}
+
+hr {
+    width: 60px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    border-style: solid;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+/* Contenedor */
+div.contenedor {
+    width: 100%; /* El ancho es 100%, esto hace que cuando la ventana sea más pequeña no se desborde su contenido */
+    max-width: 900px; /* Como máximo tendrá un ancho de 900px */
+    margin: auto;
+}
+
+/* Cabecera */
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: 250px;
+    background-color: #c9d6e8;
+}
+
+header img {
+    /*width: 200px;*/
+    width: 12em;
+    border-radius: 50%;
+
+    transform: translateY(50px);
+    padding: 8px; 
+    background-color: #c9d6e8;
+
+    transition: transform 0.8s;
+}
+
+/* Al pasar sobre la imagen se traslada sobre el eje Y mostrando un padding del color de su contenedor */
+header img:hover {
+    /*transform: translateY(50px);
+    padding: 8px; 
+    background-color: #c9d6e8;*/
+
+    transform: translateY(0px);
+}
+
+header>div {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding: 0.5em;
+}
+
+
+/* Contenedor principal */
+main {
+    display: flex;
+}
+
+/* Sección izquierda */
+section.datos-general {
+    background-color: #ecf4ff;
+    width: 40%;
+}
+
+section.datos-general img {
+    width: 25px;
+}
+
+div.contacto img {
+    margin-bottom: 20px;
+}
+
+div.contacto div {
+    display: flex;
+    align-items: center; /* Centramos verticalmente los iconos y el texto */
+}
+
+
+/* Sección derecha */
+section.datos-experiencia {
+    width: 60%;
+}
+
+section.datos-experiencia, section.datos-general {
+    padding: 25px 50px;
+}
+
+/* Contenedor lista */
+ul {
+    padding: 0px 25px;
+}
+
+ul li {
+    font-weight: bold;
+}
+
+div.habilidades li {
+    font-weight: normal;
+}
+
+/* Mediaquery */
+@media only screen and (max-width: 768px){
+    main, header {
+        flex-wrap: wrap;
+        height: auto;
+    }
+    section.datos-experiencia {
+        width: 100%;
+    }
+    section.datos-general {
+        width: 100%;
+    }
+    header {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width:582px) {
+    header img {
+        transform: translateY(0px);
+    }
+}
+
+
+
+
